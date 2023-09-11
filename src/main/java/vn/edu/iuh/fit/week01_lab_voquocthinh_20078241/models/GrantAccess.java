@@ -1,17 +1,18 @@
 package vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models;
 
 public class GrantAccess {
-    private Account account;
     private Role role;
+
+    private Account account;
     private Grant isGrant;
     private String note;
 
     public GrantAccess() {
     }
 
-    public GrantAccess(Account account, Role role, Grant isGrant, String note) {
-        this.account = account;
+    public GrantAccess(Role role, Account account, Grant isGrant, String note) {
         this.role = role;
+        this.account = account;
         this.isGrant = isGrant;
         this.note = note;
     }

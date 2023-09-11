@@ -2,18 +2,18 @@ package vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models;
 
 public class Account {
     private String id;
-    private String name;
+    private String fullName;
     private String password;
     private String email;
     private String phone;
-    private int status;
+    private Status status;
 
     public Account() {
     }
 
-    public Account(String id, String name, String password, String email, String phone, int status) {
+    public Account(String id, String fullName, String password, String email, String phone, Status status) {
         this.id = id;
-        this.name = name;
+        this.fullName = fullName;
         this.password = password;
         this.email = email;
         this.phone = phone;
@@ -28,12 +28,12 @@ public class Account {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getPassword() {
@@ -60,11 +60,11 @@ public class Account {
         this.phone = phone;
     }
 
-    public int getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
@@ -72,7 +72,7 @@ public class Account {
     public String toString() {
         return "Account{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", fullName='" + fullName + '\'' +
                 ", password='" + password + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +

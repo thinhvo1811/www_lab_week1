@@ -1,6 +1,6 @@
 package vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Logs {
     private int id;

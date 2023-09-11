@@ -4,12 +4,12 @@ public class Role {
     private String id;
     private String name;
     private String description;
-    private int status;
+    private Status status;
 
     public Role() {
     }
 
-    public Role(String id, String name, String description, int status) {
+    public Role(String id, String name, String description, Status status) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -40,11 +40,11 @@ public class Role {
         this.description = description;
     }
 
-    public int getStatus() {
+    public Status getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Status status) {
         this.status = status;
     }
 
