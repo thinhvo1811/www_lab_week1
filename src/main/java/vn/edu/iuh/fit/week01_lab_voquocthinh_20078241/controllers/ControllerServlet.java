@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Account;
 import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.GrantAccess;
 import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Role;
+import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Status;
 import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.repositories.AccountRepository;
 import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.repositories.GrantAccessRepository;
 import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.repositories.RoleRepository;
@@ -61,11 +62,17 @@ public class ControllerServlet extends HttpServlet {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+        } else if (action.equals("addAccount")) {
+            try {
+                addAccount(req,resp);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
     private void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String userName = request.getParameter("userName");
+        String userName = request.getParameter("accountID");
         String password = request.getParameter("password");
 
         AccountRepository accountRepository = new AccountRepository();
@@ -82,7 +89,7 @@ public class ControllerServlet extends HttpServlet {
             }
         }
         else {
-            request.setAttribute("notification", "Username hoặc password không chính xác!");
+            request.setAttribute("notification", "AccountID hoặc Password không chính xác!");
             url = "/pages/login.jsp";
         }
         RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
@@ -148,18 +155,49 @@ public class ControllerServlet extends HttpServlet {
 
         GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
         GrantAccess grantAccess = grantAccessRepository.getByID(roleID, accountID);
-        String url = "";
 
         if(grantAccess == null){
             grantAccessRepository.grantRoleToAccount(accountID, roleID);
             request.setAttribute("notification", "Đã cấp role cho account thành công!");
-            url = "/pages/grantRoleToAccount.jsp";
+            request.setAttribute("textColor", "green");
         }
         else{
             request.setAttribute("notification", "Account đã tồn tại Role này");
-            url = "/pages/grantRoleToAccount.jsp";
+            request.setAttribute("textColor", "red");
         }
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/grantRoleToAccount.jsp");
+        rd.forward(request, response);
+    }
+
+    private void addAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        String id = request.getParameter("accountID");
+        String fullName = request.getParameter("fullName");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String phone = request.getParameter("phone");
+        String status = request.getParameter("status");
+
+        AccountRepository accountRepository = new AccountRepository();
+        Account account = accountRepository.getByID(id);
+
+        if(account == null){
+            Account account2 = new Account(id, fullName, password, email, phone, Status.valueOf(status));
+            accountRepository.insert(account2);
+            request.setAttribute("notification", "Đã thêm Account thành công!");
+            request.setAttribute("textColor", "green");
+        }
+        else{
+            request.setAttribute("notification", "AccountID đã được sử dụng");
+            request.setAttribute("textColor", "red");
+
+            request.setAttribute("id", id);
+            request.setAttribute("fullName", fullName);
+            request.setAttribute("password", password);
+            request.setAttribute("email", email);
+            request.setAttribute("phone", phone);
+            request.setAttribute("status", status);
+        }
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/add/addAccount.jsp");
         rd.forward(request, response);
     }
 }

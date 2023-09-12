@@ -10,8 +10,11 @@
     <link href="<%=url%>/css/index.css" rel="stylesheet" >
 </head>
 <body>
-    <div class="container">
-        <a href="<%=url%>/pages/login.jsp" class="btn">Đăng nhập</a>
-    </div>
+<div class="container">
+    <a href="<%=url%>/pages/add/addAccount.jsp" class="btn">Thêm Account</a>
+    <a href="<%=url%>/pages/login.jsp" class="btn">Thêm Role</a>
+    <a href="<%=url%>/pages/login.jsp" class="btn">Thêm GrantAccess</a>
+    <a href="<%=url%>/pages/showRole.jsp" class="btn">Thêm Log</a>
+</div>
 </body>
 </html>
