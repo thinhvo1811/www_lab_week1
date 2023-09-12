@@ -55,10 +55,16 @@ public class ControllerServlet extends HttpServlet {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+        } else if (action.equals("logout")) {
+            try {
+                logout(req,resp);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
-    public void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
 
@@ -67,8 +73,13 @@ public class ControllerServlet extends HttpServlet {
         String url = "";
 
         if(account != null){
-            request.setAttribute("account", account);
-            url = "/pages/successLogin.jsp";
+            if(accountRepository.isAdminAccount(account.getId())){
+                url = "/pages/successLoginWithAdminRole.jsp";
+            }
+            else {
+                request.setAttribute("account", account);
+                url = "/pages/successLogin.jsp";
+            }
         }
         else {
             request.setAttribute("notification", "Username hoặc password không chính xác!");
@@ -78,7 +89,18 @@ public class ControllerServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-    public void showRole(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void logout(HttpServletRequest request, HttpServletResponse response) {
+        try {
+            String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+                    + request.getContextPath();
+
+            response.sendRedirect(url + "/index.jsp");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showRole(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String accountID = request.getParameter("account");
 
         AccountRepository accountRepository = new AccountRepository();
@@ -99,7 +121,7 @@ public class ControllerServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-    public void showAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void showAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String roleID = request.getParameter("role");
 
         RoleRepository roleRepository = new RoleRepository();
@@ -120,7 +142,7 @@ public class ControllerServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-    public void grantRoleToAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    private void grantRoleToAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String accountID = request.getParameter("account");
         String roleID = request.getParameter("role");
 
@@ -137,5 +159,7 @@ public class ControllerServlet extends HttpServlet {
             request.setAttribute("notification", "Account đã tồn tại Role này");
             url = "/pages/grantRoleToAccount.jsp";
         }
+        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
+        rd.forward(request, response);
     }
 }

@@ -1,3 +1,6 @@
+<%@ page import="vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.repositories.RoleRepository" %>
+<%@ page import="vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Role" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -20,8 +23,18 @@
     <input type="hidden" name="action" value="showAccount"/>
 
     <div class="mb-3">
-      <label for="role" class="form-label">Role ID</label>
-      <input type="text" name="role" class="form-control" id="role">
+      <label for="role" class="form-label">Select Role</label>
+      <select class="form-control" id="role" name="role">
+        <%
+          RoleRepository roleRepository = new RoleRepository();
+          ArrayList<Role> roles = (ArrayList<Role>) roleRepository.getAll();
+          for (Role role : roles) {
+        %>
+        <option value="<%=role.getId()%>"><%=role.getId()%></option>
+        <%
+          }
+        %>
+      </select>
     </div>
     <%
       String notification = request.getAttribute("notification")+"";

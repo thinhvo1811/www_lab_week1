@@ -2,12 +2,23 @@ html,
 body {
     height: 100%;
     width: 100%;
-    margin-top: 0;
-    margin-left: 0;
 }
 
-.main {
+.wrap{
     height: 100%;
+    width: 100%;
+}
+
+.header{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container {
+    height: 90%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -31,4 +42,13 @@ body {
 
 .btn:hover{
     background-color: #fb6445;
+}
+
+.btn.btn-sm{
+    height: 38px;
+    line-height: normal;
+    font-size: 18px;
+    border: none;
+    background-color: #fb3333;
+    margin-right: 35px;
 }

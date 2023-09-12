@@ -1,8 +1,7 @@
 package vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.repositories;
 
 import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.connect.Connect;
-import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Account;
-import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Status;
+import vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.*;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -93,5 +92,18 @@ public class AccountRepository{
             return ac;
         }
         return null;
+    }
+
+    public boolean isAdminAccount(String accountID) throws Exception {
+        Connect.getInstance().connect();
+        Connection con = Connect.getCon();
+        String sql="select * from grant_access gr inner join role r on gr.role_id = r.role_id where r.role_name ='admin' and account_id=?";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, accountID);
+        ResultSet rs = ps.executeQuery();
+        if(rs.next()){
+            return true;
+        }
+        return false;
     }
 }
