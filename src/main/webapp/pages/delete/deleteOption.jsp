@@ -11,10 +11,10 @@
 </head>
 <body>
 <div class="container">
-    <a href="<%=url%>/pages/add/addAccount.jsp" class="btn">Thêm Account</a>
-    <a href="<%=url%>/pages/add/addRole.jsp" class="btn">Thêm Role</a>
-    <a href="<%=url%>/pages/add/addGrantAccess.jsp" class="btn">Thêm GrantAccess</a>
-    <a href="<%=url%>/pages/add/addLog.jsp" class="btn">Thêm Log</a>
+    <a href="<%=url%>/pages/delete/deleteAccount.jsp" class="btn">Xóa Account</a>
+    <a href="<%=url%>/pages/delete/deleteRole.jsp" class="btn">Xóa Role</a>
+    <a href="<%=url%>/pages/delete/deleteGrantAccess.jsp" class="btn">Xóa GrantAccess</a>
+    <a href="<%=url%>/pages/delete/deleteLog.jsp" class="btn">Xóa Log</a>
 </div>
 </body>
 </html>

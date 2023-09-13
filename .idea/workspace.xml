@@ -4,18 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Làm phần: Đăng nhập&#10;          Hiển thị thông tin tài khoản (nếu đăng nhập thành công)&#10;          Hiển thị các quyền của một account.&#10;          Hiển thị các account của một role">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" afterDir="false" />
+    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Làm phần: Thêm account">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addGrantAccess.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addLog.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addRole.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteGrantAccess.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteLog.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteOption.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteRole.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/models/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/models/Logs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addOption.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addOption.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/showAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/showAccount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/showRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/showRole.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successShowAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successShowAccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successShowRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successShowRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +59,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;thinhvo1811&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="2d3aed6f-5e02-4ac9-88e9-b77bcc08977b" />
+        <option name="url" value="https://github.com/thinhvo1811/www_lab_week1.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -94,6 +113,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\IdeaProjects\www_lab_week1\src\main\webapp\pages\add" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Tomcat 10.1.11" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
@@ -198,7 +222,11 @@
       <workItem from="1694414579460" duration="13137000" />
       <workItem from="1694442836522" duration="3362000" />
       <workItem from="1694479893287" duration="3848000" />
-      <workItem from="1694493989297" duration="3971000" />
+      <workItem from="1694493989297" duration="4301000" />
+      <workItem from="1694515152778" duration="9000" />
+      <workItem from="1694515196270" duration="8636000" />
+      <workItem from="1694527003139" duration="106000" />
+      <workItem from="1694593245211" duration="9414000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <option name="closed" value="true" />
@@ -216,7 +244,23 @@
       <option name="project" value="LOCAL" />
       <updated>1694427700980</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Làm phần: Cấp quyền cho account">
+      <option name="closed" value="true" />
+      <created>1694498290507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694498290507</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Làm phần: Thêm account">
+      <option name="closed" value="true" />
+      <created>1694523848824</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694523848824</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +269,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create project" />
     <MESSAGE value="Làm phần: Đăng nhập&#10;          Hiển thị thông tin tài khoản (nếu đăng nhập thành công)&#10;          Hiển thị các quyền của một account.&#10;          Hiển thị các account của một role" />
-    <option name="LAST_COMMIT_MESSAGE" value="Làm phần: Đăng nhập&#10;          Hiển thị thông tin tài khoản (nếu đăng nhập thành công)&#10;          Hiển thị các quyền của một account.&#10;          Hiển thị các account của một role" />
+    <MESSAGE value="Làm phần: Cấp quyền cho account" />
+    <MESSAGE value="Làm phần: Thêm account" />
+    <option name="LAST_COMMIT_MESSAGE" value="Làm phần: Thêm account" />
   </component>
 </project>

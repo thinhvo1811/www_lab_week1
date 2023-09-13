@@ -72,7 +72,7 @@
                 </select>
             </div>
             <div class="form-text"><span style="color: <%= textColor%>"><%= notification%></span></div>
-            <input type="submit" value="Add" class="btn btn-primary"/>
+            <input type="submit" value="Add Account" class="btn btn-primary"/>
         </form>
     </main>
 </body>

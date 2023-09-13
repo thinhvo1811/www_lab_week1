@@ -34,13 +34,7 @@
         %>
       </select>
     </div>
-    <%
-      String notification = request.getAttribute("notification")+"";
-      if(notification.equals("null")){
-        notification = "";
-      }
-    %>
-    <div id="notification" class="form-text"><%= notification%></div>
+
     <input type="submit" value="Show Role" class="btn btn-primary"/>
   </form>
 </main>
