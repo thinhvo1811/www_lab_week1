@@ -1,18 +1,19 @@
 package vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models;
 
 import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class Logs {
     private int id;
     private String accountID;
-    private Date loginDate;
-    private Date logoutDate;
+    private LocalDateTime loginDate;
+    private LocalDateTime logoutDate;
     private String note;
 
     public Logs() {
     }
 
-    public Logs(int id, String accountID, Date loginDate, Date logoutDate, String note) {
+    public Logs(int id, String accountID, LocalDateTime loginDate, LocalDateTime logoutDate, String note) {
         this.id = id;
         this.accountID = accountID;
         this.loginDate = loginDate;
@@ -20,7 +21,7 @@ public class Logs {
         this.note = note;
     }
 
-    public Logs(String accountID, Date loginDate, Date logoutDate, String note) {
+    public Logs(String accountID, LocalDateTime loginDate, LocalDateTime logoutDate, String note) {
         this.accountID = accountID;
         this.loginDate = loginDate;
         this.logoutDate = logoutDate;
@@ -43,19 +44,19 @@ public class Logs {
         this.accountID = accountID;
     }
 
-    public Date getLoginDate() {
+    public LocalDateTime getLoginDate() {
         return loginDate;
     }
 
-    public void setLoginDate(Date loginDate) {
+    public void setLoginDate(LocalDateTime loginDate) {
         this.loginDate = loginDate;
     }
 
-    public Date getLogoutDate() {
+    public LocalDateTime getLogoutDate() {
         return logoutDate;
     }
 
-    public void setLogoutDate(Date logoutDate) {
+    public void setLogoutDate(LocalDateTime logoutDate) {
         this.logoutDate = logoutDate;
     }
 

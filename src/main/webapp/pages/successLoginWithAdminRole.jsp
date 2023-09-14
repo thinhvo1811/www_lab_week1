@@ -20,7 +20,7 @@
         </div>
         <div class="container">
             <a href="<%=url%>/pages/add/addOption.jsp" class="btn">Thêm</a>
-            <a href="<%=url%>/pages/login.jsp" class="btn">Cập nhật</a>
+            <a href="<%=url%>/pages/update/updateOption.jsp" class="btn">Cập nhật</a>
             <a href="<%=url%>/pages/delete/deleteOption.jsp" class="btn">Xóa</a>
             <a href="<%=url%>/pages/showRole.jsp" class="btn">Hiển thị các role của một account</a>
             <a href="<%=url%>/pages/showAccount.jsp" class="btn">Hiển thị các account của một role</a>

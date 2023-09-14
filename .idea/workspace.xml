@@ -4,22 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Làm phần: Thêm account">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addGrantAccess.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addLog.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addRole.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteAccount.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteGrantAccess.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteLog.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteOption.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteRole.jsp" afterDir="false" />
+    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Làm phần: Thêm, xóa Account, Role, GrantAccess, Log">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllGrantAccess.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllLog.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllRole.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/selectAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/selectGrantAccess.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/selectLog.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/selectRole.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/updateAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/updateGrantAccess.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/updateLog.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/updateOption.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/update/updateRole.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/models/Logs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/models/Logs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addAccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addOption.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/add/addOption.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/showAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/showAccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/showRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/showRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/LogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/LogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +229,9 @@
       <workItem from="1694515152778" duration="9000" />
       <workItem from="1694515196270" duration="8636000" />
       <workItem from="1694527003139" duration="106000" />
-      <workItem from="1694593245211" duration="9414000" />
+      <workItem from="1694593245211" duration="9592000" />
+      <workItem from="1694610549522" duration="10498000" />
+      <workItem from="1694662097736" duration="12618000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <option name="closed" value="true" />
@@ -260,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694523848824</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Làm phần: Thêm, xóa Account, Role, GrantAccess, Log">
+      <option name="closed" value="true" />
+      <created>1694603417654</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1694603417654</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -271,6 +284,7 @@
     <MESSAGE value="Làm phần: Đăng nhập&#10;          Hiển thị thông tin tài khoản (nếu đăng nhập thành công)&#10;          Hiển thị các quyền của một account.&#10;          Hiển thị các account của một role" />
     <MESSAGE value="Làm phần: Cấp quyền cho account" />
     <MESSAGE value="Làm phần: Thêm account" />
-    <option name="LAST_COMMIT_MESSAGE" value="Làm phần: Thêm account" />
+    <MESSAGE value="Làm phần: Thêm, xóa Account, Role, GrantAccess, Log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Làm phần: Thêm, xóa Account, Role, GrantAccess, Log" />
   </component>
 </project>
