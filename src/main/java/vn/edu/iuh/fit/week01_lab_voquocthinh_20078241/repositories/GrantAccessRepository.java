@@ -68,7 +68,7 @@ public class GrantAccessRepository {
     public List<GrantAccess> getAll() throws Exception {
         Connect.getInstance().connect();
         Connection con = Connect.getCon();
-        String sql="select * from grant_access ";
+        String sql="SELECT gr.role_id, gr.account_id, gr.is_grant, gr.note from grant_access gr INNER JOIN role r ON gr.role_id = r.role_id INNER JOIN account ac ON gr.account_id = ac.account_id WHERE r.`status` != 'DELETED' AND ac.`status` != 'DELETED'";
         PreparedStatement ps = con.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         List<GrantAccess>lst=new ArrayList<>();
@@ -84,7 +84,7 @@ public class GrantAccessRepository {
     public List<Role> getAllRoleByAccountID(String id) throws Exception {
         Connect.getInstance().connect();
         Connection con = Connect.getCon();
-        String sql="SELECT r.role_id, r.role_name, r.description, r.`status` from grant_access gr inner join role r on gr.role_id = r.role_id WHERE gr.account_id = ?";
+        String sql="SELECT r.role_id, r.role_name, r.description, r.`status` from grant_access gr inner join role r on gr.role_id = r.role_id WHERE gr.account_id = ? and r.status != 'DELETED'";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setString(1, id);
         ResultSet rs = ps.executeQuery();
@@ -99,7 +99,7 @@ public class GrantAccessRepository {
     public List<Account> getAllAccountByRoleID(String id) throws Exception {
         Connect.getInstance().connect();
         Connection con = Connect.getCon();
-        String sql="SELECT ac.account_id, ac.full_name, ac.`password`, ac.email, ac.phone, ac.`status` from grant_access gr inner join account ac on gr.account_id = ac.account_id WHERE gr.role_id = ?";
+        String sql="SELECT ac.account_id, ac.full_name, ac.`password`, ac.email, ac.phone, ac.`status` from grant_access gr inner join account ac on gr.account_id = ac.account_id WHERE gr.role_id = ? and ac.status != 'DELETED'";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setString(1, id);
         ResultSet rs = ps.executeQuery();

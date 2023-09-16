@@ -414,7 +414,9 @@ public class ControllerServlet extends HttpServlet {
         String id = request.getParameter("accountID");
 
         AccountRepository accountRepository = new AccountRepository();
-        accountRepository.delete(id);
+        Account account = accountRepository.getByID(id);
+        account.setStatus(Status.DELETED);
+        accountRepository.update(account);
 
         request.setAttribute("notification", "Đã xóa Account thành công!");
 
@@ -426,7 +428,9 @@ public class ControllerServlet extends HttpServlet {
         String id = request.getParameter("roleID");
 
         RoleRepository roleRepository = new RoleRepository();
-        roleRepository.delete(id);
+        Role role = roleRepository.getByID(id);
+        role.setStatus(Status.DELETED);
+        roleRepository.update(role);
 
         request.setAttribute("notification", "Đã xóa Role thành công!");
 

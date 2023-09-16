@@ -68,7 +68,7 @@ public class AccountRepository{
     public List<Account> getAll() throws Exception {
         Connect.getInstance().connect();
         Connection con = Connect.getCon();
-        String sql="select * from account ";
+        String sql="select * from account where status != 'DELETED'";
         PreparedStatement ps = con.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         List<Account>lst=new ArrayList<>();
@@ -82,7 +82,7 @@ public class AccountRepository{
     public Account getByIDAndPassword(String id, String password) throws Exception {
         Connect.getInstance().connect();
         Connection con = Connect.getCon();
-        String sql="select * from account where account_id=? and password=?";
+        String sql="select * from account where account_id=? and password=? and status != 'DELETED'";
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setString(1, id);
         ps.setString(2, password);

@@ -65,7 +65,7 @@ public class RoleRepository {
     public List<Role> getAll() throws Exception {
         Connect.getInstance().connect();
         Connection con = Connect.getCon();
-        String sql="select * from role ";
+        String sql="select * from role where status != 'DELETED'";
         PreparedStatement ps = con.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         List<Role>lst=new ArrayList<>();
