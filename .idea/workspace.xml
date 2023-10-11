@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Bổ sung">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +229,8 @@
       <workItem from="1695119885695" duration="958000" />
       <workItem from="1696953247072" duration="4450000" />
       <workItem from="1697025708042" duration="306000" />
-      <workItem from="1697026035024" duration="1619000" />
+      <workItem from="1697026035024" duration="2245000" />
+      <workItem from="1697034682516" duration="325000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <option name="closed" value="true" />

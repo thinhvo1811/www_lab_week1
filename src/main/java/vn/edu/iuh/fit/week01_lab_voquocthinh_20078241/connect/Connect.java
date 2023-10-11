@@ -18,7 +18,7 @@ public class Connect {
 
     public void connect() throws Exception {
         Class.forName("org.mariadb.jdbc.Driver");
-        String url = "jdbc:mariadb://localhost:3306/mydb2?createDatabaseIfNotExist=true";
+        String url = "jdbc:mariadb://localhost:3306/mydb?createDatabaseIfNotExist=true";
         con = DriverManager.getConnection(url, "root", "");
     }
 
