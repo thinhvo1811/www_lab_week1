@@ -17,18 +17,32 @@
 </head>
 <body>
     <main class="ps-3">
-        <h1>Các role của account</h1>
-        <%
-            ArrayList<Role> roles = (ArrayList<Role>) request.getAttribute("roles");
-            for(Role role : roles){
-        %>
-                <p>ID: <%= role.getId()%></p>
-                <p>Name: <%= role.getName()%></p>
-                <p>Description: <%= role.getDescription()%></p>
-                <p>Status: <%= role.getStatus()%></p>
-        <%
-            }
-        %>
+        <h2 style="text-align: center; margin-bottom: 15px">Các role của account</h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+                <%
+                    ArrayList<Role> roles = (ArrayList<Role>) request.getAttribute("roles");
+                    for(Role role : roles){
+                %>
+                    <tr>
+                        <th scope="row"><%= role.getId()%></th>
+                        <td><%= role.getName()%></td>
+                        <td><%= role.getDescription()%></td>
+                        <td><%= role.getStatus()%></td>
+                    </tr>
+                <%
+                    }
+                %>
+            </tbody>
+        </table>
     </main>
 </body>
 </html>

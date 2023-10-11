@@ -24,7 +24,7 @@
             <a href="<%=url%>/pages/delete/deleteOption.jsp" class="btn">Xóa</a>
             <a href="<%=url%>/pages/showRole.jsp" class="btn">Hiển thị các role của một account</a>
             <a href="<%=url%>/pages/showAccount.jsp" class="btn">Hiển thị các account của một role</a>
-            <a href="<%=url%>/pages/grantRoleToAccount.jsp" class="btn">Cấp quyền cho một account</a>
+            <a href="<%=url%>/pages/grantRoleToAccount.jsp" class="btn">Cấp role cho một account</a>
         </div>
     </div>
 </body>

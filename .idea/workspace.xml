@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Bổ sung file sql">
+    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Sửa chức năng xóa">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/GrantAccessRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/GrantAccessRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllGrantAccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllGrantAccess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllLog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllLog.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successShowAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successShowAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successShowRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successShowRole.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,12 +94,13 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dell/IdeaProjects/www_lab_week1/data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Java/gradle-8.2&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -223,7 +230,11 @@
       <workItem from="1694662097736" duration="12670000" />
       <workItem from="1694675245717" duration="299000" />
       <workItem from="1694685396531" duration="729000" />
-      <workItem from="1694871112301" duration="2838000" />
+      <workItem from="1694871112301" duration="3050000" />
+      <workItem from="1694942584334" duration="161000" />
+      <workItem from="1695119885695" duration="958000" />
+      <workItem from="1696953247072" duration="4450000" />
+      <workItem from="1697025708042" duration="306000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <option name="closed" value="true" />
@@ -281,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694686015142</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Sửa chức năng xóa">
+      <option name="closed" value="true" />
+      <created>1694874171115</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694874171115</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +314,7 @@
     <MESSAGE value="Làm phần: Thêm, xóa Account, Role, GrantAccess, Log" />
     <MESSAGE value="Làm phần: Cập nhật Account, Role, GrantAccess, Log" />
     <MESSAGE value="Bổ sung file sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bổ sung file sql" />
+    <MESSAGE value="Sửa chức năng xóa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sửa chức năng xóa" />
   </component>
 </project>

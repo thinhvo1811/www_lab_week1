@@ -24,22 +24,35 @@
         String notification = request.getAttribute("notification")+"";
         notification = (notification.equals("null"))?"":notification;
     %>
-    <h1><%=notification%></h1>
+    <h2><%=notification%></h2>
     <p></p>
-    <h3>Danh sách các GrantAccess</h3>
-    <%
-        GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
-        ArrayList<GrantAccess> grantAccesses = (ArrayList<GrantAccess>) grantAccessRepository.getAll();
-        for(GrantAccess grantAccess : grantAccesses){
-    %>
-    <p>Role ID: <%= grantAccess.getRole().getId()%></p>
-    <p>Account ID: <%= grantAccess.getAccount().getId()%></p>
-    <p>Is Grant: <%= grantAccess.getIsGrant()%></p>
-    <p>Note: <%= grantAccess.getNote()%></p>
-    <p>-------------------------------</p>
-    <%
-        }
-    %>
+    <h3 style="text-align: center; margin-bottom: 15px">Danh sách các GrantAccess</h3>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Role ID</th>
+            <th scope="col">Account ID</th>
+            <th scope="col">Is Grant</th>
+            <th scope="col">Note</th>
+        </tr>
+        </thead>
+        <tbody>
+            <%
+                GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
+                ArrayList<GrantAccess> grantAccesses = (ArrayList<GrantAccess>) grantAccessRepository.getAll();
+                for(GrantAccess grantAccess : grantAccesses){
+            %>
+                <tr>
+                    <th scope="row"><%= grantAccess.getRole().getId()%></th>
+                    <td><%= grantAccess.getAccount().getId()%></td>
+                    <td><%= grantAccess.getIsGrant()%></td>
+                    <td><%= grantAccess.getNote()%></td>
+                </tr>
+            <%
+                }
+            %>
+        </tbody>
+    </table>
 </main>
 </body>
 </html>

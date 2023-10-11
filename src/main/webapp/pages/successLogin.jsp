@@ -18,13 +18,29 @@
         <%
             Account account = (Account) request.getAttribute("account");
         %>
-        <h1>Thông tin tài khoản</h1>
-        <p>ID: <%= account.getId()%></p>
-        <p>Fullname: <%= account.getFullName()%></p>
-        <p>Password: <%= account.getPassword()%></p>
-        <p>Email: <%= account.getEmail()%></p>
-        <p>Phone: <%= account.getPhone()%></p>
-        <p>Status: <%= account.getStatus()%></p>
+        <h2 style="text-align: center; margin-bottom: 15px">Thông tin tài khoản</h2>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Fullname</th>
+                <th scope="col">Password</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Status</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><%= account.getId()%></th>
+                    <td><%= account.getFullName()%></td>
+                    <td><%= account.getPassword()%></td>
+                    <td><%= account.getEmail()%></td>
+                    <td><%= account.getPhone()%></td>
+                    <td><%= account.getStatus()%></td>
+                </tr>
+            </tbody>
+        </table>
         <p></p>
         <%
             String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()

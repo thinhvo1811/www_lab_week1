@@ -23,22 +23,35 @@
         String notification = request.getAttribute("notification")+"";
         notification = (notification.equals("null"))?"":notification;
     %>
-    <h1><%=notification%></h1>
+    <h2><%=notification%></h2>
     <p></p>
-    <h3>Danh sách các Role</h3>
-    <%
-        RoleRepository roleRepository = new RoleRepository();
-        ArrayList<Role> roles = (ArrayList<Role>) roleRepository.getAll();
-        for(Role role : roles){
-    %>
-    <p>ID: <%= role.getId()%></p>
-    <p>Name: <%= role.getName()%></p>
-    <p>Description: <%= role.getDescription()%></p>
-    <p>Status: <%= role.getStatus()%></p>
-    <p>-------------------------------</p>
-    <%
-        }
-    %>
+    <h3 style="text-align: center; margin-bottom: 15px">Danh sách các Role</h3>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+            <%
+                RoleRepository roleRepository = new RoleRepository();
+                ArrayList<Role> roles = (ArrayList<Role>) roleRepository.getAll();
+                for(Role role : roles){
+            %>
+                <tr>
+                    <th scope="row"><%= role.getId()%></th>
+                    <td><%= role.getName()%></td>
+                    <td><%= role.getDescription()%></td>
+                    <td><%= role.getStatus()%></td>
+                </tr>
+            <%
+                }
+            %>
+        </tbody>
+    </table>
 </main>
 </body>
 </html>

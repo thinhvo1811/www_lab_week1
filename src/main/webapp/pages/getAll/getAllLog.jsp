@@ -24,23 +24,37 @@
         String notification = request.getAttribute("notification")+"";
         notification = (notification.equals("null"))?"":notification;
     %>
-    <h1><%=notification%></h1>
+    <h2><%=notification%></h2>
     <p></p>
-    <h3>Danh sách các Log</h3>
-    <%
-        LogRepository logRepository = new LogRepository();
-        ArrayList<Logs> logs = (ArrayList<Logs>) logRepository.getAll();
-        for(Logs log : logs){
-    %>
-    <p>ID: <%= log.getId()%></p>
-    <p>Account ID: <%= log.getAccountID()%></p>
-    <p>Login Date: <%= log.getLoginDate()%></p>
-    <p>Logout Date: <%= log.getLogoutDate()%></p>
-    <p>Note: <%= log.getNote()%></p>
-    <p>-------------------------------</p>
-    <%
-        }
-    %>
+    <h3 style="text-align: center; margin-bottom: 15px">Danh sách các Log</h3>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Account ID</th>
+            <th scope="col">Login Date</th>
+            <th scope="col">Logout Date</th>
+            <th scope="col">Note</th>
+        </tr>
+        </thead>
+        <tbody>
+            <%
+                LogRepository logRepository = new LogRepository();
+                ArrayList<Logs> logs = (ArrayList<Logs>) logRepository.getAll();
+                for(Logs log : logs){
+            %>
+            <tr>
+                <th scope="row"><%= log.getId()%></th>
+                <td><%= log.getAccountID()%></td>
+                <td><%= log.getLoginDate()%></td>
+                <td><%= log.getLogoutDate()%></td>
+                <td><%= log.getNote()%></td>
+            </tr>
+            <%
+                }
+            %>
+        </tbody>
+    </table>
 </main>
 </body>
 </html>

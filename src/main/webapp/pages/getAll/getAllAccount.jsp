@@ -22,24 +22,39 @@
     String notification = request.getAttribute("notification")+"";
     notification = (notification.equals("null"))?"":notification;
   %>
-  <h1><%=notification%></h1>
+  <h2><%=notification%></h2>
   <p></p>
-  <h3>Danh sách các Account</h3>
-  <%
-    AccountRepository accountRepository = new AccountRepository();
-    ArrayList<Account> accounts = (ArrayList<Account>) accountRepository.getAll();
-    for(Account account : accounts){
-  %>
-  <p>ID: <%= account.getId()%></p>
-  <p>Fullname: <%= account.getFullName()%></p>
-  <p>Password: <%= account.getPassword()%></p>
-  <p>Email: <%= account.getEmail()%></p>
-  <p>Phone: <%= account.getPhone()%></p>
-  <p>Status: <%= account.getStatus()%></p>
-  <p>-------------------------------</p>
-  <%
-    }
-  %>
+  <h3 style="text-align: center; margin-bottom: 15px">Danh sách các Account</h3>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Fullname</th>
+      <th scope="col">Password</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+      <%
+        AccountRepository accountRepository = new AccountRepository();
+        ArrayList<Account> accounts = (ArrayList<Account>) accountRepository.getAll();
+        for(Account account : accounts){
+      %>
+        <tr>
+          <th scope="row"><%= account.getId()%></th>
+          <td><%= account.getFullName()%></td>
+          <td><%= account.getPassword()%></td>
+          <td><%= account.getEmail()%></td>
+          <td><%= account.getPhone()%></td>
+          <td><%= account.getStatus()%></td>
+        </tr>
+      <%
+        }
+      %>
+    </tbody>
+  </table>
 </main>
 </body>
 </html>
