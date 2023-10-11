@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Sửa chức năng xóa">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllAccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllGrantAccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllGrantAccess.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllLog.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllLog.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllRole.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successShowAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successShowAccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successShowRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successShowRole.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Bổ sung" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -235,6 +223,7 @@
       <workItem from="1695119885695" duration="958000" />
       <workItem from="1696953247072" duration="4450000" />
       <workItem from="1697025708042" duration="306000" />
+      <workItem from="1697026035024" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <option name="closed" value="true" />
@@ -300,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694874171115</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Bổ sung">
+      <option name="closed" value="true" />
+      <created>1697026088823</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1697026088823</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +312,7 @@
     <MESSAGE value="Làm phần: Cập nhật Account, Role, GrantAccess, Log" />
     <MESSAGE value="Bổ sung file sql" />
     <MESSAGE value="Sửa chức năng xóa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sửa chức năng xóa" />
+    <MESSAGE value="Bổ sung" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bổ sung" />
   </component>
 </project>
