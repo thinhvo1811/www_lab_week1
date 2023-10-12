@@ -25,6 +25,8 @@
 - ✍ Khi đăng nhập thành công với tài khoản có quyền Admin sẽ hiển các chức năng thêm, xóa, sửa, cấp quyền, xem Role và Account
 <p></p>
 <img src="img/successfulLoginWithAdminRole.png"/>
+2. Chức năng thêm
+<p></p>
 - ✍ Khi chọn chức năng thêm sẽ hiển thị các bảng muốn thêm
 <p></p>
 <img src="img/addLayout.png"/>
@@ -47,6 +49,8 @@
 <p></p>
 <img src="img/addLog.png"/>
 <img src="img/successfulAddLog.png"/>
+3. Chức năng sửa
+<p></p>
 - ✍ Khi chọn chức năng sửa sẽ hiển thị các bảng muốn sửa
 <p></p>
 <img src="img/updateLayout.png"/>
@@ -61,6 +65,8 @@
 <img src="img/successfulUpdateAccount.png"/>
 - ✍ Các bảng còn tại cũng có thể thực hiện sửa tương tự 
 <p></p>
+4. Chức năng xóa
+<p></p>
 - ✍ Khi chọn chức năng xóa sẽ hiển thị các bảng muốn xóa
 <p></p>
 <img src="img/deleteLayout.png"/>
@@ -72,18 +78,23 @@
 <img src="img/successfulDeleteAccount.png"/>
 - ✍ Các bảng còn tại cũng có thể thực hiện xóa tương tự 
 <p></p>
+5. Chức năng hiển thị Role của một Account
+<p></p>
 - ✍ Khi chọn chức năng hiển thị các Role của một Account thì sẽ yêu cầu chọn AccountID muốn hiển thị các Role của nó
 <p></p>
 <img src="img/selectAccountForShowRole.png"/>
 - ✍ Danh sách các Role của Account sẽ được hiển thị
 <p></p>
 <img src="img/successfulShowRowByAccount.png"/>
+6. Chức năng hiển thị Account của một Role
 - ✍ Khi chọn chức năng hiển thị các Account của một Role thì sẽ yêu cầu chọn RoleID muốn hiển thị các Account của nó
 <p></p>
 <img src="img/selectRoleForShowAccount.png"/>
 - ✍ Danh sách các Account của Role sẽ được hiển thị
 <p></p>
 <img src="img/successfulShowAccountByRole.png"/>
+7. Chức năng cấp Role của một Account
+<p></p>
 - ✍ Khi chọn chức năng cấp Role cho một Account thì sẽ yêu cầu chọn RoleID và AccountID muốn cấp 
 <p></p>
 <img src="img/selectRoleAndAccountForGrantAccess.png"/>
@@ -93,6 +104,8 @@
 - ✍ Nếu cấp thành công sẽ hiển thị danh sách các GrantAccess 
 <p></p>
 <img src="img/successfulGrantAccess.png"/>
+8. Chức năng đăng xuất
+<p></p>
 - ✍ Nếu chọn chức năng đăng xuất thì sẽ trở lại trang màn hình chính và ghi Logout Time vào Log
 <p></p>
 <img src="img/mainLayout.png"/>
