@@ -64,6 +64,8 @@
 <img src="img/successfulDeleteAccount.png"/>
 - ✍ Khi chọn chức năng cấp quyền cho một tài khoản thì sẽ yêu cầu chọn RoleID và AccountID muốn cấp 
 <p></p>
+- ✍ Khi cấp quyền thì isGrant sẽ mặt định là ENABLE, nếu hủy quyền thì sẽ set isGrant lại thành DISABLE
+<p></p>
 <img src="img/selectRoleAndAccountForGrantAccess.png"/>
 - ✍ Khi tài khoản này đã tồn tại quyền này thì sẽ thông báo lỗi 
 <p></p>
