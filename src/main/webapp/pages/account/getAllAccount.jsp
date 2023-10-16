@@ -24,7 +24,7 @@
   %>
   <h2><%=notification%></h2>
   <p></p>
-  <h3 style="text-align: center; margin-bottom: 15px">Danh sách các Account</h3>
+  <h3 style="text-align: center; margin-bottom: 15px">Danh sách các tài khoản</h3>
   <table class="table table-hover">
     <thead>
     <tr>
@@ -34,6 +34,7 @@
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
       <th scope="col">Status</th>
+      <th scope="col">Roles</th>
     </tr>
     </thead>
     <tbody>
@@ -49,6 +50,7 @@
           <td><%= account.getEmail()%></td>
           <td><%= account.getPhone()%></td>
           <td><%= account.getStatus()%></td>
+          <td><%= accountRepository.getRoleNameByAccountID(account.getId())%></td>
         </tr>
       <%
         }

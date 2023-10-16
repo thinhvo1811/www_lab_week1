@@ -1,3 +1,4 @@
+<%@ page import="vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Account" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -19,46 +20,41 @@
     notification = (notification.equals("null"))?"":notification;
 
     String textColor = request.getAttribute("textColor")+"";
+    textColor = (textColor.equals("null"))?"white":textColor;
 
-    String id= request.getAttribute("id")+"";
-    id = (id.equals("null"))?"":id;
-
-    String name= request.getAttribute("name")+"";
-    name = (name.equals("null"))?"":name;
-
-    String description= request.getAttribute("description")+"";
-    description = (description.equals("null"))?"":description;
-
-
-    String status= request.getAttribute("status")+"";
-    status = (status.equals("null"))?"":status;
+    Account account = (Account) request.getAttribute("account");
 %>
 <main class="form-signin w-100 m-auto">
     <form action="<%= url %>/services" method="POST">
-        <input type="hidden" name="action" value="addRole"/>
+        <input type="hidden" name="action" value="updateAccount"/>
+        <input type="hidden" name="accountID" value="<%=account.getId()%>"/>
 
         <div class="mb-3">
-            <label for="roleID" class="form-label">Role ID</label>
-            <input type="text" name="roleID" class="form-control" id="roleID" value="<%=id%>" required>
+            <label for="fullName" class="form-label">Fullname</label>
+            <input type="text" name="fullName" class="form-control" id="fullName" value="<%=account.getFullName()%>" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="password" value="<%=account.getPassword()%>" required>
         </div>
         <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" name="name" class="form-control" id="name" value="<%=name%>" required>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" value="<%=account.getEmail()%>" required>
         </div>
         <div class="mb-3">
-            <label for="description" class="form-label">Description</label>
-            <input type="text" name="description" class="form-control" id="description" value="<%=description%>" required>
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" name="phone" class="form-control" id="phone" value="<%=account.getPhone()%>" required>
         </div>
         <div class="mb-3">
             <label for="status" class="form-label">Status</label>
             <select class="form-control" id="status" name="status">
-                <option value="ACTIVE" <%=(status.equals("ACTIVE"))?"selected='selected'":"" %> >ACTIVE</option>
-                <option value="DEACTIVE" <%=(status.equals("DEACTIVE"))?"selected='selected'":"" %> >DEACTIVE</option>
-                <option value="DELETED" <%=(status.equals("DELETED"))?"selected='selected'":"" %> >DELETED</option>
+                <option value="ACTIVE" <%=(account.getStatus().name().equals("ACTIVE"))?"selected='selected'":"" %> >ACTIVE</option>
+                <option value="DEACTIVE" <%=(account.getStatus().name().equals("DEACTIVE"))?"selected='selected'":"" %> >DEACTIVE</option>
             </select>
         </div>
         <div class="form-text"><span style="color: <%= textColor%>"><%= notification%></span></div>
-        <input type="submit" value="Add Role" class="btn btn-primary"/>
+        <input type="submit" value="Update Account" class="btn btn-primary"/>
     </form>
 </main>
 </body>

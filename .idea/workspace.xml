@@ -5,8 +5,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe9849d2-696f-45a6-a9b0-a6ec1b8dbc34" name="Changes" comment="Bổ sung">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/manageAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e314e28-28ab-48d4-8970-2e56825e490a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7e314e28-28ab-48d4-8970-2e56825e490a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2023_7_13_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_10_2023_7_13_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/addAccountForm.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/addAccountForm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/addLayout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/addLog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/deleteLayout.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/failAddAccount.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/failAddAccount.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/failAddGrantAccess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/failAddRole.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/failGrantAccess.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/failGrantAccess.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/mainLayout.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/mainLayout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/selectAccountForDelete.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/selectAccountForDelete.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/selectAccountForShowRole.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/selectAccountForShowRole.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/selectAccountForUpdating.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/selectAccountForUpdating.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/selectRoleAndAccountForGrantAccess.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/selectRoleAndAccountForGrantAccess.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/selectRoleForShowAccount.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/selectRoleForShowAccount.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successLoginWithoutAdminRole.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/successLoginWithoutAdminRole.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulAddAccount.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/successfulAddAccount.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulAddGrantAccess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulAddLog.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulAddRole.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulDeleteAccount.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/successfulDeleteAccount.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulGrantAccess.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulLoginWithAdminRole.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/successfulLoginWithAdminRole.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulShowAccountByRole.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/successfulShowAccountByRole.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulShowRowByAccount.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/successfulShowRowByAccount.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/successfulUpdateAccount.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/successfulUpdateAccount.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/updateAccountForm.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/updateAccountForm.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/updateLayout.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/connect/Connect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/controllers/ControllerServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/GrantAccessRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vn/edu/iuh/fit/week01_lab_voquocthinh_20078241/repositories/GrantAccessRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/addAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addGrantAccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/addGrantAccess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addLog.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addOption.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/add/addRole.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/deleteAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteGrantAccess.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteLog.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteOption.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/delete/deleteRole.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/getAllAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllGrantAccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/getAllGrantAccess.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllLog.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/getAll/getAllRole.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/grantRoleToAccount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/successLoginWithAdminRole.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/selectAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/selectAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/selectGrantAccess.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/selectLog.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/selectRole.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/updateAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/updateAccount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/updateGrantAccess.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/updateLog.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/updateOption.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/update/updateRole.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,33 +142,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Java/gradle-8.2&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/dell/Desktop/Clone/www_lab_week1",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mariadb&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mariadb"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dell\IdeaProjects\www_lab_week1\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dell\Desktop\Clone\www_lab_week1\src\main\webapp\pages\account" />
+      <recent name="C:\Users\dell\Desktop\Clone\www_lab_week1\src\main\webapp\pages\add" />
+      <recent name="C:\Users\dell\Desktop\Clone\www_lab_week1\src\main\webapp\pages" />
       <recent name="C:\Users\dell\IdeaProjects\www_lab_week1\src\main\webapp\pages\add" />
     </key>
   </component>
@@ -231,6 +295,7 @@
       <workItem from="1697025708042" duration="306000" />
       <workItem from="1697026035024" duration="2245000" />
       <workItem from="1697034682516" duration="325000" />
+      <workItem from="1697434700822" duration="6950000" />
     </task>
     <task id="LOCAL-00001" summary="create project">
       <option name="closed" value="true" />

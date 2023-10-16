@@ -58,12 +58,6 @@ public class ControllerServlet extends HttpServlet {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-        } else if (action.equals("grantRole")) {
-            try {
-                grantRoleToAccount(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
         } else if (action.equals("logout")) {
             try {
                 logout(req,resp);
@@ -76,45 +70,15 @@ public class ControllerServlet extends HttpServlet {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-        } else if (action.equals("addRole")) {
-            try {
-                addRole(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
         }else if (action.equals("addGrantAccess")) {
             try {
                 addGrantAccess(req,resp);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-        }else if (action.equals("addLog")) {
-            try {
-                addLog(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
         }else if (action.equals("deleteAccount")) {
             try {
                 deleteAccount(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("deleteRole")) {
-            try {
-                deleteRole(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("deleteGrantAccess")) {
-            try {
-                deleteGrantAccess(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("deleteLog")) {
-            try {
-                deleteLog(req,resp);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
@@ -127,42 +91,6 @@ public class ControllerServlet extends HttpServlet {
         } else if (action.equals("updateAccount")) {
             try {
                 updateAccount(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("selectRoleForUpdating")) {
-            try {
-                selectRoleForUpdating(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("updateRole")) {
-            try {
-                updateRole(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("selectGrantAccessForUpdating")) {
-            try {
-                selectGrantAccessForUpdating(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("updateGrantAccess")) {
-            try {
-                updateGrantAccess(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("selectLogForUpdating")) {
-            try {
-                selectLogForUpdating(req,resp);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-        }else if (action.equals("updateLog")) {
-            try {
-                updateLog(req,resp);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
@@ -265,35 +193,13 @@ public class ControllerServlet extends HttpServlet {
         rd.forward(request, response);
     }
 
-    private void grantRoleToAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String accountID = request.getParameter("account");
-        String roleID = request.getParameter("role");
-
-        GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
-        GrantAccess grantAccess = grantAccessRepository.getByID(roleID, accountID);
-        String url = "";
-
-        if(grantAccess == null){
-            grantAccessRepository.grantRoleToAccount(accountID, roleID);
-            request.setAttribute("notification", "Đã cấp role cho account thành công!");
-            url = "/pages/getAll/getAllGrantAccess.jsp";
-        }
-        else{
-            request.setAttribute("notification", "Account đã tồn tại Role này");
-            request.setAttribute("textColor", "red");
-            url = "/pages/grantRoleToAccount.jsp";
-        }
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
-        rd.forward(request, response);
-    }
-
     private void addAccount(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String id = request.getParameter("accountID");
         String fullName = request.getParameter("fullName");
         String password = request.getParameter("password");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
-        String status = request.getParameter("status");
+        String status = String.valueOf(Status.ACTIVE);
 
         AccountRepository accountRepository = new AccountRepository();
         Account account = accountRepository.getByID(id);
@@ -303,49 +209,18 @@ public class ControllerServlet extends HttpServlet {
             Account account2 = new Account(id, fullName, password, email, phone, Status.valueOf(status));
             accountRepository.insert(account2);
             request.setAttribute("notification", "Đã thêm Account thành công!");
-            url = "/pages/getAll/getAllAccount.jsp";
+            url = "/pages/account/getAllAccount.jsp";
         }
         else{
             request.setAttribute("notification", "AccountID đã được sử dụng");
             request.setAttribute("textColor", "red");
-            url = "/pages/add/addAccount.jsp";
+            url = "/pages/account/addAccount.jsp";
 
             request.setAttribute("id", id);
             request.setAttribute("fullName", fullName);
             request.setAttribute("password", password);
             request.setAttribute("email", email);
             request.setAttribute("phone", phone);
-            request.setAttribute("status", status);
-        }
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
-        rd.forward(request, response);
-    }
-
-    private void addRole(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String id = request.getParameter("roleID");
-        String name = request.getParameter("name");
-        String description = request.getParameter("description");
-        String status = request.getParameter("status");
-
-        RoleRepository roleRepository = new RoleRepository();
-        Role role = roleRepository.getByID(id);
-        String url = "";
-
-        if(role == null){
-            Role role2 = new Role(id, name, description, Status.valueOf(status));
-            roleRepository.insert(role2);
-            request.setAttribute("notification", "Đã thêm Role thành công!");
-            url = "/pages/getAll/getAllRole.jsp";
-        }
-        else{
-            request.setAttribute("notification", "RoleID đã được sử dụng");
-            request.setAttribute("textColor", "red");
-            url = "/pages/add/addRole.jsp";
-
-            request.setAttribute("id", id);
-            request.setAttribute("name", name);
-            request.setAttribute("description", description);
-            request.setAttribute("status", status);
         }
         RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
         rd.forward(request, response);
@@ -354,7 +229,7 @@ public class ControllerServlet extends HttpServlet {
     private void addGrantAccess(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String roleID = request.getParameter("role");
         String accountID = request.getParameter("account");
-        String isGrant = request.getParameter("isGrant");
+        String isGrant = String.valueOf(Grant.ENABLE);
         String note = request.getParameter("note");
 
         GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
@@ -371,42 +246,19 @@ public class ControllerServlet extends HttpServlet {
         if(grantAccess == null){
             GrantAccess grantAccess2 = new GrantAccess(role, account, Grant.valueOf(isGrant), note);
             grantAccessRepository.insert(grantAccess2);
-            request.setAttribute("notification", "Đã thêm GrantAccess thành công!");
-            url = "/pages/getAll/getAllGrantAccess.jsp";
+            request.setAttribute("notification", "Đã cấp quyền cho tài khoản thành công!");
+            url = "/pages/account/getAllGrantAccess.jsp";
         }
         else{
-            request.setAttribute("notification", "Account đã được cấp Role này");
+            request.setAttribute("notification", "Tài khoản đã tồn tại quyền này");
             request.setAttribute("textColor", "red");
-            url = "/pages/add/addGrantAccess.jsp";
+            url = "/pages/account/addGrantAccess.jsp";
 
             request.setAttribute("roleID", roleID);
             request.setAttribute("accountID", accountID);
-            request.setAttribute("isGrant", isGrant);
             request.setAttribute("note", note);
         }
         RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
-        rd.forward(request, response);
-    }
-
-    private void addLog(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String accountID = request.getParameter("accountID");
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
-        String loginInput = request.getParameter("loginDate")+" 00:00:00";
-        LocalDateTime loginDate =LocalDateTime.parse(loginInput, formatter);
-
-        String logoutInput = request.getParameter("logoutDate")+" 00:00:00";
-        LocalDateTime logoutDate =LocalDateTime.parse(logoutInput, formatter);
-
-        String note = request.getParameter("note");
-
-        LogRepository logRepository = new LogRepository();
-        Logs log = new Logs(accountID, loginDate, logoutDate, note);
-        logRepository.insert(log);
-        request.setAttribute("notification", "Đã thêm log thành công!");
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllLog.jsp");
         rd.forward(request, response);
     }
 
@@ -414,62 +266,11 @@ public class ControllerServlet extends HttpServlet {
         String id = request.getParameter("accountID");
 
         AccountRepository accountRepository = new AccountRepository();
-        Account account = accountRepository.getByID(id);
-        account.setStatus(Status.DELETED);
-        accountRepository.update(account);
+        accountRepository.delete(id);
 
-        request.setAttribute("notification", "Đã xóa Account thành công!");
+        request.setAttribute("notification", "Đã xóa tài khoản thành công!");
 
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllAccount.jsp");
-        rd.forward(request, response);
-    }
-
-    private void deleteRole(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String id = request.getParameter("roleID");
-
-        RoleRepository roleRepository = new RoleRepository();
-        Role role = roleRepository.getByID(id);
-        role.setStatus(Status.DELETED);
-        roleRepository.update(role);
-
-        request.setAttribute("notification", "Đã xóa Role thành công!");
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllRole.jsp");
-        rd.forward(request, response);
-    }
-
-    private void deleteGrantAccess(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String roleID = request.getParameter("roleID");
-        String accountID = request.getParameter("accountID");
-
-        GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
-        GrantAccess grantAccess = grantAccessRepository.getByID(roleID, accountID);
-        String url = "";
-
-        if(grantAccess != null){
-            grantAccessRepository.delete(roleID, accountID);
-            request.setAttribute("notification", "Đã xóa GrantAccess thành công!");
-            url = "/pages/getAll/getAllGrantAccess.jsp";
-        }
-        else {
-            request.setAttribute("notification", "Role này chưa được cấp cho Account này nên không thể xóa!");
-            request.setAttribute("textColor", "red");
-            url = "/pages/delete/deleteGrantAccess.jsp";
-        }
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
-        rd.forward(request, response);
-    }
-
-    private void deleteLog(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        int id = Integer.parseInt(request.getParameter("logID"));
-
-        LogRepository logRepository = new LogRepository();
-        logRepository.delete(id);
-
-        request.setAttribute("notification", "Đã xóa Log thành công!");
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllLog.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/account/getAllAccount.jsp");
         rd.forward(request, response);
     }
 
@@ -481,7 +282,7 @@ public class ControllerServlet extends HttpServlet {
 
         request.setAttribute("account", account);
 
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/update/updateAccount.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/account/updateAccount.jsp");
         rd.forward(request, response);
     }
 
@@ -498,120 +299,9 @@ public class ControllerServlet extends HttpServlet {
         Account account = new Account(id, fullName, password, email, phone, Status.valueOf(status));
         accountRepository.update(account);
 
-        request.setAttribute("notification", "Đã cập nhật Account thành công!");
+        request.setAttribute("notification", "Đã cập nhật tài khoản thành công!");
 
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllAccount.jsp");
-        rd.forward(request, response);
-    }
-
-    private void selectRoleForUpdating(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String id = request.getParameter("roleID");
-
-        RoleRepository roleRepository = new RoleRepository();
-        Role role = roleRepository.getByID(id);
-
-        request.setAttribute("role", role);;
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/update/updateRole.jsp");
-        rd.forward(request, response);
-    }
-
-    private void updateRole(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String id = request.getParameter("roleID");
-        String name = request.getParameter("name");
-        String description = request.getParameter("description");
-        String status = request.getParameter("status");
-
-        RoleRepository roleRepository = new RoleRepository();
-        Role role = new Role(id, name, description, Status.valueOf(status));
-        roleRepository.update(role);
-
-        request.setAttribute("notification", "Đã cập nhật Role thành công!");
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllRole.jsp");
-        rd.forward(request, response);
-    }
-
-    private void selectGrantAccessForUpdating(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String roleID = request.getParameter("roleID");
-        String accountID = request.getParameter("accountID");
-
-        GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
-        GrantAccess grantAccess = grantAccessRepository.getByID(roleID, accountID);
-        String url = "";
-
-        if(grantAccess != null){
-            request.setAttribute("grantAccess", grantAccess);
-            url = "/pages/update/updateGrantAccess.jsp";
-        }
-        else {
-            request.setAttribute("notification", "Role này chưa được cấp cho Account này nên không thể cập nhật!");
-            request.setAttribute("textColor", "red");
-            url = "/pages/update/selectGrantAccess.jsp";
-        }
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher(url);
-        rd.forward(request, response);
-    }
-
-    private void updateGrantAccess(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        String roleID = request.getParameter("roleID");
-        String accountID = request.getParameter("accountID");
-        String isGrant = request.getParameter("isGrant");
-        String note = request.getParameter("note");
-
-        GrantAccessRepository grantAccessRepository = new GrantAccessRepository();
-
-        RoleRepository roleRepository = new RoleRepository();
-        Role role = roleRepository.getByID(roleID);
-
-        AccountRepository accountRepository = new AccountRepository();
-        Account account = accountRepository.getByID(accountID);
-
-        GrantAccess grantAccess = new GrantAccess(role, account, Grant.valueOf(isGrant), note);
-
-        grantAccessRepository.update(grantAccess);
-
-
-        request.setAttribute("notification", "Đã cập nhật GrantAccess thành công!");
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllGrantAccess.jsp");
-        rd.forward(request, response);
-    }
-
-    private void selectLogForUpdating(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        int id = Integer.parseInt(request.getParameter("logID"));
-
-        LogRepository logRepository = new LogRepository();
-        Logs log = logRepository.getByID(id);
-
-        request.setAttribute("log", log);
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/update/updateLog.jsp");
-        rd.forward(request, response);
-    }
-
-    private void updateLog(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        int id = Integer.parseInt(request.getParameter("id"));
-        String accountID = request.getParameter("accountID");
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
-        String loginInput = request.getParameter("loginDate")+" 00:00:00";
-        LocalDateTime loginDate =LocalDateTime.parse(loginInput, formatter);
-
-        String logoutInput = request.getParameter("logoutDate")+" 00:00:00";
-        LocalDateTime logoutDate =LocalDateTime.parse(logoutInput, formatter);
-
-        String note = request.getParameter("note");
-
-        LogRepository logRepository = new LogRepository();
-        Logs log = new Logs(id, accountID, loginDate, logoutDate, note);
-        logRepository.update(log);
-
-        request.setAttribute("notification", "Đã cập nhật Log thành công!");
-
-        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/getAll/getAllLog.jsp");
+        RequestDispatcher rd = getServletContext().getRequestDispatcher("/pages/account/getAllAccount.jsp");
         rd.forward(request, response);
     }
 }

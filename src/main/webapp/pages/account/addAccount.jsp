@@ -34,9 +34,6 @@
 
         String phone= request.getAttribute("phone")+"";
         phone = (phone.equals("null"))?"":phone;
-
-        String status= request.getAttribute("status")+"";
-        status = (status.equals("null"))?"":status;
     %>
     <main class="form-signin w-100 m-auto">
         <form action="<%= url %>/services" method="POST">
@@ -62,14 +59,6 @@
             <div class="mb-3">
                 <label for="phone" class="form-label">Phone</label>
                 <input type="tel" name="phone" class="form-control" id="phone" value="<%=phone%>" required>
-            </div>
-            <div class="mb-3">
-                <label for="status" class="form-label">Status</label>
-                <select class="form-control" id="status" name="status">
-                    <option value="ACTIVE" <%=(status.equals("ACTIVE"))?"selected='selected'":"" %> >ACTIVE</option>
-                    <option value="DEACTIVE" <%=(status.equals("DEACTIVE"))?"selected='selected'":"" %> >DEACTIVE</option>
-                    <option value="DELETED" <%=(status.equals("DELETED"))?"selected='selected'":"" %> >DELETED</option>
-                </select>
             </div>
             <div class="form-text"><span style="color: <%= textColor%>"><%= notification%></span></div>
             <input type="submit" value="Add Account" class="btn btn-primary"/>

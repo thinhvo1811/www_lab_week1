@@ -43,12 +43,10 @@ public class AccountRepository{
     }
 
     public void delete(String id) throws Exception {
-        Connect.getInstance().connect();
-        Connection con = Connect.getCon();
-        String sql="delete from account where account_id=?";
-        PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, id);
-        ps.executeUpdate();
+        AccountRepository accountRepository = new AccountRepository();
+        Account account = accountRepository.getByID(id);
+        account.setStatus(Status.DELETED);
+        accountRepository.update(account);
     }
 
     public Account getByID(String id) throws Exception {
@@ -105,5 +103,20 @@ public class AccountRepository{
             return true;
         }
         return false;
+    }
+
+    public List<String> getRoleNameByAccountID(String id) throws Exception {
+        Connect.getInstance().connect();
+        Connection con = Connect.getCon();
+        String sql="SELECT r.role_name FROM grant_access gr JOIN role r ON gr.role_id = r.role_id WHERE gr.account_id = ? AND gr.is_grant = 'ENABLE'";
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1, id);
+        ResultSet rs = ps.executeQuery();
+        List<String> roleNames = new ArrayList<>();
+        while(rs.next()){
+            String name = rs.getString(1);
+            roleNames.add(name);
+        }
+        return roleNames;
     }
 }

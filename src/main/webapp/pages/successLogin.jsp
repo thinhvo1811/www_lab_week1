@@ -1,4 +1,6 @@
-<%@ page import="vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Account" %><%--
+        <%@ page import="vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.models.Account" %>
+<%@ page import="java.util.List" %>
+<%@ page import="vn.edu.iuh.fit.week01_lab_voquocthinh_20078241.repositories.AccountRepository" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 11/09/2023
@@ -17,6 +19,13 @@
     <main class="ps-3">
         <%
             Account account = (Account) request.getAttribute("account");
+            AccountRepository accountRepository = new AccountRepository();
+            List<String> rolesNames;
+            try {
+                rolesNames = accountRepository.getRoleNameByAccountID(account.getId());
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
         %>
         <h2 style="text-align: center; margin-bottom: 15px">Thông tin tài khoản</h2>
         <table class="table table-hover">
@@ -28,16 +37,18 @@
                 <th scope="col">Email</th>
                 <th scope="col">Phone</th>
                 <th scope="col">Status</th>
+                <th scope="col">Roles</th>
             </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row"><%= account.getId()%></th>
-                    <td><%= account.getFullName()%></td>
-                    <td><%= account.getPassword()%></td>
-                    <td><%= account.getEmail()%></td>
-                    <td><%= account.getPhone()%></td>
-                    <td><%= account.getStatus()%></td>
+                    <th scope="row"><%=account.getId()%></th>
+                    <td><%=account.getFullName()%></td>
+                    <td><%=account.getPassword()%></td>
+                    <td><%=account.getEmail()%></td>
+                    <td><%=account.getPhone()%></td>
+                    <td><%=account.getStatus()%></td>
+                    <td><%=rolesNames%></td>
                 </tr>
             </tbody>
         </table>
@@ -46,7 +57,7 @@
             String url = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
                     + request.getContextPath();
         %>
-        <form action="<%= url %>/services" method="POST">
+        <form action="<%=url%>/services" method="POST">
             <input type="hidden" name="action" value="logout"/>
             <input type="submit" value="Logout" class="btn btn-primary"/>
         </form>

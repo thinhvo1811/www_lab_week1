@@ -110,16 +110,4 @@ public class GrantAccessRepository {
         }
         return lst;
     }
-
-    public void grantRoleToAccount(String accountID, String roleID) throws Exception {
-        Connect.getInstance().connect();
-        Connection con = Connect.getCon();
-        String sql="insert into grant_access values(?,?,?,?)";
-        PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, roleID);
-        ps.setString(2, accountID);
-        ps.setString(3, Grant.ENABLE.name());
-        ps.setString(4, "");
-        ps.executeUpdate();
-    }
 }
