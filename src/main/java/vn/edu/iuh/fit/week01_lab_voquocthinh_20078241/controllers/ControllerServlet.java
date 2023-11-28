@@ -46,6 +46,22 @@ public class ControllerServlet extends HttpServlet {
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+        } else if (action.equals("toManageAccountPage")) {
+            resp.sendRedirect("pages/manageAccount.jsp");
+        } else if (action.equals("toShowRolePage")) {
+            resp.sendRedirect("pages/showRole.jsp");
+        } else if (action.equals("toShowAccountPage")) {
+            resp.sendRedirect("pages/showAccount.jsp");
+        } else if (action.equals("toGetAllAccountPage")) {
+            resp.sendRedirect("pages/account/getAllAccount.jsp");
+        } else if (action.equals("toAddAccountPage")) {
+            resp.sendRedirect("pages/account/addAccount.jsp");
+        } else if (action.equals("toSelectAccountPage")) {
+            resp.sendRedirect("pages/account/selectAccount.jsp");
+        } else if (action.equals("toDeleteAccountPage")) {
+            resp.sendRedirect("pages/account/deleteAccount.jsp");
+        } else if (action.equals("toAddGrantAccessPage")) {
+            resp.sendRedirect("pages/account/addGrantAccess.jsp");
         }
     }
 

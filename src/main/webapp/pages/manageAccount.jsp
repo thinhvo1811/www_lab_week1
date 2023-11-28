@@ -11,11 +11,11 @@
 </head>
 <body>
 <div class="container">
-    <a href="<%=url%>/pages/account/getAllAccount.jsp" class="btn">Danh sách tài khoản</a>
-    <a href="<%=url%>/pages/account/addAccount.jsp" class="btn">Thêm tài khoản</a>
-    <a href="<%=url%>/pages/account/selectAccount.jsp" class="btn">Cập nhật tài khoản</a>
-    <a href="<%=url%>/pages/account/deleteAccount.jsp" class="btn">Xóa tài khoản</a>
-    <a href="<%=url%>/pages/account/addGrantAccess.jsp" class="btn">Cấp quyền cho tài khoản</a>
+    <a href="<%=url%>/services?action=toGetAllAccountPage" class="btn">Danh sách tài khoản</a>
+    <a href="<%=url%>/services?action=toAddAccountPage" class="btn">Thêm tài khoản</a>
+    <a href="<%=url%>/services?action=toSelectAccountPage" class="btn">Cập nhật tài khoản</a>
+    <a href="<%=url%>/services?action=toDeleteAccountPage" class="btn">Xóa tài khoản</a>
+    <a href="<%=url%>/services?action=toAddGrantAccessPage" class="btn">Cấp quyền cho tài khoản</a>
 </div>
 </body>
 </html>

@@ -19,9 +19,9 @@
             </form>
         </div>
         <div class="container">
-            <a href="<%=url%>/pages/manageAccount.jsp" class="btn">Quản lý tài khoản</a>
-            <a href="<%=url%>/pages/showRole.jsp" class="btn">Hiển thị các quyền của một tài khoản</a>
-            <a href="<%=url%>/pages/showAccount.jsp" class="btn">Hiển thị các tài khoản của một quyền</a>
+            <a href="<%=url%>/services?action=toManageAccountPage" class="btn">Quản lý tài khoản</a>
+            <a href="<%=url%>/services?action=toShowRolePage" class="btn">Hiển thị các quyền của một tài khoản</a>
+            <a href="<%=url%>/services?action=toShowAccountPage" class="btn">Hiển thị các tài khoản của một quyền</a>
         </div>
     </div>
 </body>
